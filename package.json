@@ -1,0 +1,51 @@
+{
+  "name": "@seniorquico/app-linker",
+  "version": "0.1.0",
+  "description": "The collection of Zapic platform packages.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seniorquico/AppLinker.UI.git"
+  },
+  "homepage": "https://seniorquico.github.io/AppLinker/",
+  "bugs": {
+    "url": "https://github.com/seniorquico/AppLinker.UI/issues"
+  },
+  "author": {
+    "name": "Kyle Dodson",
+    "email": "kyledodson@gmail.com",
+    "url": "https://github.com/seniorquico/"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=10.13.0",
+    "yarn": ">=1.10.0"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    "@types/history": "^4.7.2",
+    "@types/jest": "24.0.11",
+    "@types/luxon": "^1.12.0",
+    "@types/node": "11.13.4",
+    "@types/react": "16.8.13",
+    "@types/react-dom": "16.8.4",
+    "history": "^4.9.0",
+    "luxon": "^1.12.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8",
+    "rxjs": "^6.4.0",
+    "typescript": "3.4.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
