@@ -4,7 +4,6 @@ import { catchError, concatMap, map } from 'rxjs/operators'
 import { getJSON } from './api'
 import { ProblemDetailsError } from './api/ProblemDetailsError'
 import { ResponseError } from './api/ResponseError'
-import { HistoryContext } from './features/router'
 import { FetchContext } from './FetchContext'
 
 const reducer = (state, action) => {
@@ -19,7 +18,6 @@ const reducer = (state, action) => {
 export const Shell = () => {
   const [state, dispatch] = React.useReducer(reducer, null)
 
-  const location = React.useContext(HistoryContext)
   let fetch = React.useContext(FetchContext)
   React.useEffect(() => {
     /**
@@ -103,14 +101,6 @@ export const Shell = () => {
       <p>
         You can be reached at <a href={'mailto:' + state.email}>{state.email}</a>
       </p>
-      <h2>History - Location</h2>
-      <ul>
-        <li>Hash: {location.hash}</li>
-        <li>Hash: {location.key}</li>
-        <li>Hash: {location.pathname}</li>
-        <li>Hash: {location.search}</li>
-        <li>Hash: {location.state}</li>
-      </ul>
     </>
   )
 }
