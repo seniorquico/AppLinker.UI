@@ -1,25 +1,22 @@
-import { createBrowserHistory } from 'history'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Location } from './components/Location'
 import { Navigation } from './components/Navigation'
-import { Router } from './features'
+import { RouterWrapper } from './components/RouterWrapper'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 import { Shell } from './Shell'
 
-const history = createBrowserHistory()
-
 const app = ReactDOM.unstable_createRoot(document.getElementById('root'))
 app.render(
   <React.StrictMode>
-    <Router history={history}>
+    <RouterWrapper>
       <Navigation />
       <hr />
       <Location />
       <hr />
       <Shell />
-    </Router>
+    </RouterWrapper>
   </React.StrictMode>,
 )
 
