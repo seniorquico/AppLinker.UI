@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { useRouter } from './features/router'
+import { useRouterLocation } from '../features'
 
 export const Location = () => {
-  const location = useRouter()
-
+  const location = useRouterLocation()
   return (
     <ul>
       <li>Hash: {location.hash}</li>

@@ -1,41 +1,25 @@
+import { createBrowserHistory } from 'history'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { push } from './features/router'
-import { History } from './History'
+import { Location } from './components/Location'
+import { Navigation } from './components/Navigation'
+import { Router } from './features'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 import { Shell } from './Shell'
 
+const history = createBrowserHistory()
+
 const app = ReactDOM.unstable_createRoot(document.getElementById('root'))
 app.render(
   <React.StrictMode>
-    <Shell />
-    <hr />
-    <ul>
-      <li
-        onClick={() => {
-          push('/home')
-        }}
-      >
-        Home
-      </li>
-      <li
-        onClick={() => {
-          push('/about')
-        }}
-      >
-        About
-      </li>
-      <li
-        onClick={() => {
-          push('/contact')
-        }}
-      >
-        Contact
-      </li>
-    </ul>
-    <hr />
-    <History />
+    <Router history={history}>
+      <Navigation />
+      <hr />
+      <Location />
+      <hr />
+      <Shell />
+    </Router>
   </React.StrictMode>,
 )
 
